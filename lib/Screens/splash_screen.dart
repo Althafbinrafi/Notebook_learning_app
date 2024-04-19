@@ -16,12 +16,12 @@ class SplashScreen extends StatelessWidget {
         toolbarHeight: 0,
         elevation: 0,
         backgroundColor: Colors.white,
-        iconTheme: IconThemeData(color: const Color.fromARGB(255, 0, 0, 0)),
+        iconTheme: const IconThemeData(color: Color.fromARGB(255, 0, 0, 0)),
       ),
       body: Center(
         child: Container(
           //color: Colors.amber,
-          margin: EdgeInsets.only(top: 100),
+          margin: const EdgeInsets.only(top: 100),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.start,
@@ -40,7 +40,7 @@ class SplashScreen extends StatelessWidget {
                   fontSize: 13,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 40,
               ),
               Image.asset(
@@ -51,7 +51,7 @@ class SplashScreen extends StatelessWidget {
                 height:
                     (screenWidth / 1.3) * (319 / 253), // Keep the aspect ratio
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               Padding(
@@ -61,7 +61,7 @@ class SplashScreen extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
                     color: mainColor,
-                    borderRadius: BorderRadius.all(Radius.circular(15)),
+                    borderRadius: const BorderRadius.all(Radius.circular(15)),
                   ),
                   child: TextButton(
                     child: Text(
@@ -72,7 +72,7 @@ class SplashScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) {
-                        return OpeningScreen();
+                        return const OpeningScreen();
                       }));
                     },
                   ),

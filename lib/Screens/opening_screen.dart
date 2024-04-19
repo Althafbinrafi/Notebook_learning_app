@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:notebook/Constants/Colors.dart';
+import 'package:notebook/Screens/Login_screen.dart';
 import 'package:notebook/Screens/Sign_page.dart';
+import 'package:notebook/Screens/splash_screen.dart';
 
 class OpeningScreen extends StatelessWidget {
   const OpeningScreen({super.key});
@@ -12,13 +14,13 @@ class OpeningScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Center(
         child: Container(
-          margin: EdgeInsets.only(top: 140),
+          margin: const EdgeInsets.only(top: 140),
           child: Column(
             children: [
-              Image(
+              const Image(
                 image: AssetImage('assets/images/opening.png'),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Text(
@@ -35,7 +37,7 @@ class OpeningScreen extends StatelessWidget {
                   fontSize: 13,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 60,
               ),
               Padding(
@@ -45,7 +47,7 @@ class OpeningScreen extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
                     color: mainColor,
-                    borderRadius: BorderRadius.all(Radius.circular(15)),
+                    borderRadius: const BorderRadius.all(Radius.circular(15)),
                   ),
                   child: TextButton(
                     child: Text(
@@ -56,7 +58,7 @@ class OpeningScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) {
-                        return SignUpPage();
+                        return const SignUpPage();
                       }));
                     },
                   ),
@@ -72,7 +74,7 @@ class OpeningScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                     color: Colors.white,
                     border: Border.all(color: mainColor, width: 2),
-                    borderRadius: BorderRadius.all(Radius.circular(15)),
+                    borderRadius: const BorderRadius.all(Radius.circular(15)),
                   ),
                   child: TextButton(
                     child: Text(
@@ -83,7 +85,7 @@ class OpeningScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) {
-                        return OpeningScreen();
+                        return const LoginPage();
                       }));
                     },
                   ),
@@ -99,18 +101,20 @@ class OpeningScreen extends StatelessWidget {
         height: 45,
         width: 45,
         alignment: Alignment.topLeft,
-        margin: EdgeInsets.only(top: 60, left: 20),
+        margin: const EdgeInsets.only(top: 60, left: 20),
         child: ClipRRect(
-          borderRadius:
-              BorderRadius.circular(40), // Adjust the radius as needed
+          // borderRadius:
+          //     BorderRadius.circular(40), // Adjust the radius as needed
           child: FloatingActionButton(
             backgroundColor: mainColor,
-            child: Icon(
+            child: const Icon(
               Icons.arrow_back_ios_new,
               color: Colors.white,
             ),
             onPressed: () {
-              Navigator.pop(context);
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return const SplashScreen(title: '');
+              }));
             },
           ),
         ),

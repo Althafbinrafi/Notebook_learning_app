@@ -2,11 +2,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:notebook/Constants/Colors.dart';
-import 'package:notebook/Screens/Login_screen.dart';
+import 'package:notebook/Screens/Sign_page.dart';
 import 'package:notebook/Screens/opening_screen.dart';
 
-class SignUpPage extends StatelessWidget {
-  const SignUpPage({super.key});
+class LoginPage extends StatelessWidget {
+  const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,17 +15,17 @@ class SignUpPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Center(
             child: Container(
-          margin: const EdgeInsets.only(top: 90),
+          margin: const EdgeInsets.only(top: 100),
           child: Column(
             children: [
               const Image(
-                image: AssetImage('assets/images/signup.png'),
+                image: AssetImage('assets/images/login.png'),
               ),
               const SizedBox(
                 height: 30,
               ),
               Text(
-                'Create Your Account',
+                'Log In to Your Account',
                 style: GoogleFonts.passionOne(fontSize: 40, color: mainColor),
               ),
               const SizedBox(
@@ -49,32 +49,6 @@ class SignUpPage extends StatelessWidget {
                       child: TextFormField(
                         decoration: const InputDecoration(
                             hintText: 'Username', border: InputBorder.none),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              Container(
-                decoration: const BoxDecoration(
-                    border: Border(
-                        bottom: BorderSide(color: Colors.black, width: 1))),
-                width: MediaQuery.of(context).size.width / 1.2,
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.mail,
-                      color: mainColor,
-                    ),
-                    const SizedBox(
-                      width: 20,
-                    ),
-                    Expanded(
-                      child: TextFormField(
-                        decoration: const InputDecoration(
-                            hintText: 'Email', border: InputBorder.none),
                       ),
                     ),
                   ],
@@ -120,7 +94,7 @@ class SignUpPage extends StatelessWidget {
                   ),
                   child: TextButton(
                     child: Text(
-                      'Sign Up',
+                      'Log In',
                       style: GoogleFonts.passionOne(
                           fontSize: 20, color: Colors.white),
                     ),
@@ -141,7 +115,7 @@ class SignUpPage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text('Already have an Account?'),
+                  const Text("Don't have an Account?"),
                   const SizedBox(
                     width: 15,
                   ),
@@ -149,11 +123,11 @@ class SignUpPage extends StatelessWidget {
                     onTap: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) {
-                        return const LoginPage();
+                        return const SignUpPage();
                       }));
                     },
                     child: const Text(
-                      'Log In',
+                      'Sign Up',
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                   )
