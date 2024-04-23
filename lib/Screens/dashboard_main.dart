@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notebook/Constants/Colors.dart';
 
 class DashHome extends StatelessWidget {
   const DashHome({super.key});
@@ -9,7 +10,7 @@ class DashHome extends StatelessWidget {
       backgroundColor: Color.fromARGB(255, 255, 255, 255),
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 223, 155, 155),
-        elevation: 10,
+        elevation: 0,
         actions: [
           Row(
             children: [
@@ -20,6 +21,21 @@ class DashHome extends StatelessWidget {
             ],
           )
         ],
+      ),
+      body: Center(
+        child: Column(
+          children: [
+            Card(
+              color: mainColor,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15)),
+              child: Container(
+                width: 388,
+                height: 181,
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
