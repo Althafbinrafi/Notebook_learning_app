@@ -58,7 +58,7 @@ class OpeningScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) {
-                        return const SignUpPage();
+                        return  SignUpPage();
                       }));
                     },
                   ),
@@ -85,7 +85,7 @@ class OpeningScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) {
-                        return const LoginPage();
+                        return  LoginPage();
                       }));
                     },
                   ),
