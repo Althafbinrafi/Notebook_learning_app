@@ -5,6 +5,22 @@ class DashHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
+      appBar: AppBar(
+        backgroundColor: const Color.fromARGB(255, 223, 155, 155),
+        elevation: 10,
+        actions: [
+          Row(
+            children: [
+              Icon(Icons.menu),
+              Align(
+                alignment: Alignment.topLeft,
+              )
+            ],
+          )
+        ],
+      ),
+    );
   }
 }
